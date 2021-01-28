@@ -27,7 +27,7 @@
     <div class="banner">
         <img src="images/raya bgfine.png" class="bg" alt="backdrop">
         <div class="content">
-            <imgs scr="images/rayalogo.png" class="movieTitle">
+            <imgs src="images/rayalogo.png" class="movieTitle">
             <h4>
                 <span>2021</span>
                 <span><i>12+</i></span>
@@ -44,15 +44,15 @@
                 <a href="#"><i class="fas fa-plus"></i>My List</a>
             </div>
         </div>
-        <a class="play"><img src="images/play.png">Watch Trailer</a>
+        <a class="play" onclick="toggleVideo();"><img src="images/play.png">Watch Trailer</a>
     </div>
 
     <div class="trailer">
         <video src="video/Raya and the Last Dragon Official Trailer.mp4"  controls="true" autoplay="true"></video>
-        <img src="images/close.png">
+        <img src="images/close.png" class="close" onclick="toggleVideo();">
     </div>
 
     <script src="js/app.js"></script>
-    
+     
 </body>
 </html>
