@@ -75,11 +75,11 @@ header .logo img{
 }
 
 .search .fa-search{
-    position: relative;
-    top: 40%;
-    left: -5px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
     transform: translateY(-50%);
-    padding-left: 15px;
+    padding-right: 10px;
     color: #ffffff;
     border-right: 1px solid #ffffff;
 }
@@ -140,7 +140,7 @@ header .logo img{
     border-radius: 2px;
 }
 
-.banner .content p{
+.banner .content p {
     font-size: 1em;
     font-weight: 300;
     line-height: 1.5em;
@@ -158,6 +158,7 @@ header .logo img{
     margin-right: 10px;
     background: #de0611;
     color: #ffffff;
+    padding: 6px 20px;
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
@@ -177,7 +178,7 @@ header .logo img{
     position: absolute;
     bottom: 50px;
     left: 100px;
-    display: inline-block;
+    display: inline-flex;
     justify-content: flex-start;
     align-items: center;
     color: #ffffff;
@@ -185,15 +186,17 @@ header .logo img{
     font-weight: 500;
     text-decoration: none;
     letter-spacing: 1px;
+    font-size: 1.2em;
     cursor: pointer;
 }
+
 
 .play img{
     margin-right: 10px;
     max-width: 50px;
 }
 
-.trailer{
+.trailer video{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -227,4 +230,59 @@ header .logo img{
     cursor: pointer;
     filter: invert(1);
     max-width: 32px;
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: flex;
+        flex-direction: column;
+    }
+
+    .nav{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+
+    .banner {
+        padding: 100px 50px;
+    }
+
+
+    .banner .play {
+        left: 50px;
+        font-size: 1em;
+    }
+
+    .play img{
+        margin-right: 10px;
+        max-width: 40px;
+    }
+
+    .trailer video{
+        max-width: 90%;
+    }
+}
+
+@media (max-width:600px) {
+    header{
+        padding: 20px;
+    }
+
+    .search{
+        position: relative;
+        width: calc(100%-20px);
+        height: 40px;
+    }
+
+    .banner{
+        padding: 220px 20px 120px;
+    }
+
+    .banner .play{
+        left: 20px;
+        font-size: 1em;
+        bottom: 30px;
+    }
 }
